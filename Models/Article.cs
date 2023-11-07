@@ -17,5 +17,7 @@ namespace MedbaseLibrary.Models
         public DateTime DatePosted { get; set; }
         [Required(ErrorMessage = "Please enter an Image URL")]
         public string ImageURL { get; set; }
+        public string Topic { get; set; } = string.Empty;
+        public string Course { get; set; } = string.Empty;
     }
 }

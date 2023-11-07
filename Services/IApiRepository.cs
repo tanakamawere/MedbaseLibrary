@@ -45,5 +45,10 @@ namespace MedbaseLibrary.Services
         Task MergeCorrections();
         Task<bool> MergeOneCorrection(int id);
         Task ClearAllCorrection();
+
+        //User methods
+        void PostUser(User user);
+        Task<User> GetUserByUsername(string username);
+        Task<User> GetUserByUserGuid(string userGuid);
     }
 }

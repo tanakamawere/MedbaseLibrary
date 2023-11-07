@@ -202,5 +202,20 @@ namespace MedbaseLibrary.Services
                 isSuccessful = true;
             return isSuccessful;
         }
+
+        public async void PostUser(User user)
+        {
+            await httpClient.PostAsJsonAsync($"users/{user}", user);
+        }
+
+        public async Task<User> GetUserByUsername(string username)
+        {
+            return await httpClient.GetFromJsonAsync<User>($"users/{username}");
+        }
+
+        public async Task<User> GetUserByUserGuid(string userGuid)
+        {
+            return await httpClient.GetFromJsonAsync<User>($"users/{userGuid}");
+        }
     }
 }

@@ -7,5 +7,12 @@ public class User
     public string Username { get; set; }
     public string PhoneNumber { get; set; }
     public int YearOfStudy { get; set; }
-    public string Degree { get; set; }
+    public Degree Degree { get; set; }
+}
+
+public enum Degree
+{
+    BMS,
+    MBChB,
+    BDS
 }
