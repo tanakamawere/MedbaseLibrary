@@ -1,7 +1,10 @@
 namespace MedbaseLibrary.Models;
 
-public record Corrections(int Id, int QuestionId, bool SuggestedAnswer)
+public class Corrections
 {
+    public int Id { get; set; }
+    public int QuestionId { get; set; }
+    public bool SuggestedAnswer { get; set; }
     public string QuestionChild { get; set; } = string.Empty;
     public string SuggestedExplanation { get; set; } = string.Empty;
     public bool Merged { get; set; } = false;
