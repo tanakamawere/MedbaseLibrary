@@ -217,5 +217,44 @@ namespace MedbaseLibrary.Services
         {
             return await httpClient.GetFromJsonAsync<User>($"users/{userGuid}");
         }
+
+        public async Task<NoteDto> GetNoteDtoByReference(int topicReference)
+        {
+            return await httpClient.GetFromJsonAsync<NoteDto>($"notes/get/{topicReference}");
+        }
+        public async Task<Note> GetNoteByReferenceAsync(int topicReference)
+        {
+            return await httpClient.GetFromJsonAsync<Note>($"notes/get_with_reference/{topicReference}");
+        }
+
+        public async Task AddNoteAsync(Note note)
+        {
+            await httpClient.PostAsJsonAsync($"notes/post/{note}", note);
+        }
+
+        public async Task UpdateNoteAsync(Note note)
+        {
+            await httpClient.PutAsJsonAsync($"notes/put/{note}", note);
+        }
+
+        public async void DeleteNotes(int id)
+        {
+            await httpClient.DeleteAsync($"notes/delete/{id}");
+        }
+
+        public async Task<List<CourseTopicsDto>> GetListCourseTopicsDto()
+        {
+            return await httpClient.GetFromJsonAsync<List<CourseTopicsDto>>("notes/coursetopics/getall");
+        }
+
+        public async Task<CourseTopicsDto> GetCourseTopicsDto(string courseReference)
+        {
+            return await httpClient.GetFromJsonAsync<CourseTopicsDto>($"notes/coursetopics/get/{courseReference}");
+        }
+
+        public async Task<List<NoteDto>> GetAllNotesAsync()
+        {
+            return await httpClient.GetFromJsonAsync<List<NoteDto>>("notes/getall");
+        }
     }
 }

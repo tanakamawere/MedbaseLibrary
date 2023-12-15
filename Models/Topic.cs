@@ -12,4 +12,11 @@ namespace MedbaseLibrary.Models
         [Required(ErrorMessage = "Enter a course name")]
         public string Name { get; set; }
     }
+
+    public class CourseTopicsDto
+    {
+        public string Course { get; set; }
+        public string CourseImage { get; set; }
+        public List<Topic>? Topics { get; set; } 
+    }
 }

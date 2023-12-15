@@ -1,9 +1,21 @@
-﻿namespace MedbaseLibrary.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MedbaseLibrary.Models;
 
 public class Note
 {
     public int Id { get; set; }
+    [Required(ErrorMessage = "Select topic reference")]
     public int TopicReference { get; set; }
     public DateTime DateUpdated { get; set; } = DateTime.Now;
-    public string Text { get; set; }
+    [Required(ErrorMessage = "Add text")]
+    public string Text { get; set; } = string.Empty;
+}
+
+public class NoteDto
+{
+    public int Id { get; set; }
+    public string TopicReferenceName { get; set; }
+    public DateTime DateUpdated { get; set; }
+    public string Text { get; set; } = string.Empty;
 }

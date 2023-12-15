@@ -12,6 +12,9 @@
         //public static string apiUrl = "http://localhost:5249/";
         //public static string apiUrl = "http://10.0.2.2:5249/";
         public static string GoToMedbaseLink(string page) => $"http://medbase.co.zw/{page}";
+        public static string LinkToWhatsApp = "https://wa.me/263785468923";
+        public static string LinkToMyWebsite = "https://www.tanakamawere.co.zw";
+        public static string LinkToMyEmail = "mailto:tanaka@tanakamawere.co.zw";
 
         //For Blazor Website
         public static string Theme(string theme) => theme;

@@ -50,5 +50,14 @@ namespace MedbaseLibrary.Services
         void PostUser(User user);
         Task<User> GetUserByUsername(string username);
         Task<User> GetUserByUserGuid(string userGuid);
+
+        Task<NoteDto> GetNoteDtoByReference(int topicReference);
+        Task<Note> GetNoteByReferenceAsync(int topicReference);
+        Task AddNoteAsync(Note note);
+        Task UpdateNoteAsync(Note note);
+        void DeleteNotes(int id);
+        Task<List<CourseTopicsDto>> GetListCourseTopicsDto();
+        Task<CourseTopicsDto> GetCourseTopicsDto(string courseReference);
+        Task<List<NoteDto>> GetAllNotesAsync();
     }
 }
