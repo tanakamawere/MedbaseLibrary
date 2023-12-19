@@ -6,7 +6,7 @@
         public static double MonthlyAmount() => 3500;
         //Preference strings
         public static string SubscriptionPreferenceDate() => "subscriptionEndDate";
-        public static string SentryDsn() => "https://a2d86a9dc6351f8ae17f6b7aecdd4251@o4505919081873408.ingest.sentry.io/4505919117656064";
+        public static string SentryDsn = "https://a2d86a9dc6351f8ae17f6b7aecdd4251@o4505919081873408.ingest.sentry.io/4505919117656064";
         public static string ApplicationId() => "com.tanakamawere.medbasehybrid";
         public static string apiUrl = "https://apimedbase.azurewebsites.net/";
         //public static string apiUrl = "http://localhost:5249/";
